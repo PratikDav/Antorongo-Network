@@ -4,7 +4,7 @@ import { faMinusCircle } from '@fortawesome/free-solid-svg-icons'
 
 const ShowItem = props => {
     console.log(props)
-    const {name, imageURL} = props.item
+    const {name, imageURL,price} = props.item
     return (
         <div className="row ms-3">
             <div className="col-sm-12 col-md-12 ">
@@ -15,6 +15,7 @@ const ShowItem = props => {
                     </div>
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
+                        <h6 className="card-title">Price: ${price}</h6>
                         <p className="card-text text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, nihil.</p>
                     </div>
                 </div>

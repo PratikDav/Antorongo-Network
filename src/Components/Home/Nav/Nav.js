@@ -16,6 +16,7 @@ const Nav = () => {
         <li class="nav-item">
           <Link class="nav-link ms-5" to="/admin">Admin</Link>
         </li>
+       
         <li class="nav-item">
           <Link class="nav-link ms-5" aria-current="page" to="/service">Internet Services</Link>
         </li>
@@ -24,6 +25,9 @@ const Nav = () => {
         </li>
         <li class="nav-item">
           <Link class="nav-link ms-5" to="/contact">Contact Us</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link ms-5 me-2" to="/bookingList">Cart</Link>
         </li>
       </ul>
     </div>

@@ -1,11 +1,14 @@
 import React from 'react';
-import './Viewdata.css'
 
-const ViewData = props => {
-    const data = props.data
-    const{name, price} = data
-    const order = props.order
-    console.log(order)
+const AllItems = (props) => {
+
+    const {name,price} = props.data
+    const email = props.email
+    
+    const handleDelete =() =>{
+        
+    }
+
     return (
         <div>
             <div className="container">
@@ -17,7 +20,10 @@ const ViewData = props => {
                         <h4>{price}</h4>
                     </div>
                     <div className="d-flex table-info text-black justify-content-center col-3">
-                            <h4>{order.email}</h4>
+                            <h4>{email}</h4>
+                    </div>
+                    <div className="d-flex table-info text-black justify-content-center col-3">
+                        <button className="btn btn-danger" style={{color: 'white'}} onClick={() => handleDelete()}>Delete</button>
                     </div>
                 </div>
             </div>
@@ -25,4 +31,4 @@ const ViewData = props => {
     );
 };
 
-export default ViewData;
+export default AllItems;
