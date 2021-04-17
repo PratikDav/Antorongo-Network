@@ -15,7 +15,7 @@ const OrderViewSection = (props) => {
             <div class="card-body">
                 <h5 class="card-title">{details.name}</h5>
                 <p class="card-text">Price: {details.price}</p>
-                <Link to='/customerOrder'><button class="btn btn-success" onClick={() =>handleOrderNow()}>Order Now</button></Link>
+                <Link to='/bookingList'><button class="btn btn-success" onClick={() =>handleOrderNow()}>Order Now</button></Link>
             </div>
         </div>
     );

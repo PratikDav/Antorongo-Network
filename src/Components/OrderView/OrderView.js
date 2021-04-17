@@ -34,7 +34,7 @@ const OrderView = () => {
                 alert('We will set a link to your house')
             }
         })
-        history.push('/customerOrder')
+        history.push('/bookingList')
     }
 
 

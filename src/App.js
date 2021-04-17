@@ -16,6 +16,8 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Login from './Components/Login/login';
 import OrderView from './Components/OrderView/OrderView';
 import CustomerOrder from './Components/Customar/CustomerOrder/CustomerOrder';
+import Payment from './Components/Customar/Payment/Payment';
+import Review from './Components/Customar/Review/Review';
 
 
 export const UserContext = createContext();
@@ -27,40 +29,57 @@ function App() {
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]} className="App">
-    <Router>
-      <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-           <Route path="/manageServices">
-            <ManageService />
-          </Route>
-           <Route path="/makeAdmin">
-            <MakeAdmin />
-          </Route>
-           <Route path="/admin">
-            <Admin />
-          </Route>
-           <Route path="/orderList">
-            <OrderList />
-          </Route>
-          <Route path="/orderView/:id">
-            <OrderView/>
-          </Route>
-          <Route path="/customerOrder">
-              <CustomerOrder />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-         
+      <Router>
+        <Switch>
+
+            <Route path="/login">
+              <Login />
+            </Route>
+
+            <PrivateRoute path="/manageServices">
+              <ManageService />
+            </PrivateRoute>
+
+            <PrivateRoute path="/makeAdmin">
+              <MakeAdmin />
+            </PrivateRoute>
+
+            <PrivateRoute path="/admin">
+              <Admin />
+            </PrivateRoute>
+
+            <PrivateRoute path="/orderList">
+              <OrderList />
+            </PrivateRoute>
+
+            <PrivateRoute path="/orderView/:id">
+              <OrderView/>
+            </PrivateRoute>
+
+            <PrivateRoute path="/payment">
+                <Payment />
+            </PrivateRoute>
+
+            <PrivateRoute path="/review">
+                <Review />
+            </PrivateRoute>
+
+            <PrivateRoute path="/bookingList">
+                <CustomerOrder />
+            </PrivateRoute>
+
+            <Route path="/">
+              <Home />
+            </Route>
+            
+            <Route path="/home">
+              <Home />
+            </Route>
           
-          
-        </Switch>
-    </Router>
+            
+            
+          </Switch>
+      </Router>
     </UserContext.Provider>
   );
 }
