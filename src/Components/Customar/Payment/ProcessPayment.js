@@ -1,13 +1,13 @@
 import React from 'react';
-import {CardElement, ElementsConsumer} from '@stripe/react-stripe-js';
+import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 
+const ProcessPayment = () => {
+  const stripe = useStripe();
+  const elements = useElements();
 
-class CheckoutForm extends React.Component {
-  handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     // Block native form submission.
     event.preventDefault();
-
-    const {stripe, elements} = this.props;
 
     if (!stripe || !elements) {
       // Stripe.js has not loaded yet. Make sure to disable
@@ -20,6 +20,7 @@ class CheckoutForm extends React.Component {
     // each type of element.
     const cardElement = elements.getElement(CardElement);
 
+    // Use your card Element with other Stripe.js APIs
     const {error, paymentMethod} = await stripe.createPaymentMethod({
       type: 'card',
       card: cardElement,
@@ -32,27 +33,13 @@ class CheckoutForm extends React.Component {
     }
   };
 
-  render() {
-    const {stripe} = this.props;
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>
-          Pay
-        </button>
-      </form>
-    );
-  }
-}
-
-const InjectedCheckoutForm = () => {
   return (
-    <ElementsConsumer>
-      {({elements, stripe}) => (
-        <CheckoutForm elements={elements} stripe={stripe} />
-      )}
-    </ElementsConsumer>
+    <form className="card container" onSubmit={handleSubmit}>
+      <CardElement style={{width:'100px'}} className='mt-3' />
+      <button style={{width: '60px',backgroundColor:'#111430',color:'whitesmoke',border:'none'}} className="rounded text-center mt-4 mb-4" type="submit" disabled={!stripe}>
+        Pay
+      </button>
+    </form>
   );
 };
-
-export default CheckoutForm;
+export default ProcessPayment;

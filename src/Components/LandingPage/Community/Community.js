@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import People from '../../../image/People.gif'
@@ -37,7 +35,7 @@ const Community = () => {
                                 </CountUp></span> <span className="fs-3 fw-bold mt-3"> <p>Customers</p> </span> 
                             </div>
                             <div className="ms-5">
-                                <span className="fs-3 fw-bold">  <CountUp end={ 20 } start={0} duration={3}>
+                                <span className="fs-3 fw-bold">  <CountUp end={ 20 } start={0}>
                                                 {({ countUpRef, start }) => (
                                     <VisibilitySensor onChange={start} delayedCall>
                                         <span ref={countUpRef} />

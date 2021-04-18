@@ -144,7 +144,7 @@ const Login = () => {
   }
 
   return (
-    <div style={{textAlign: 'center'}}>
+    <div className="card container mt-5 pt-3 " style={{textAlign: 'center',color: '#111430',backgroundColor:'#f7da61',border:'1px solid #111430'}}>
        { 
     newUser  ? <div className = 'From'>
                    <h4 className="heading">Create an Account</h4>
@@ -182,8 +182,8 @@ const Login = () => {
      <p style={{color: 'red'}}>{user.error}</p>
      {user.success && <p style={{color: 'green'}}>User {newUser ? 'created' : 'logged in'} successfully! Go to Login</p>}
      { 
-        user.isSignedIn ?<button className="btn-google" onClick={handleSignOut}>Sign out with Google</button>
-                        : <button className="btn-google" onClick={handleSignIn}>Sign in with Google</button>
+        user.isSignedIn ?<button style={{width: '260px',backgroundColor:'#111430',color:'whitesmoke',border:'none'}}className="btn-google rounded text-center" onClick={handleSignOut}>Sign out with Google</button>
+                        : <button style={{width: '260px',backgroundColor:'#111430',color:'whitesmoke',border:'none'}} className="btn-google rounded text-center" onClick={handleSignIn}>Sign in with Google</button>
       
     }
     <br/>

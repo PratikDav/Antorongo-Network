@@ -7,7 +7,7 @@ import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
 
-const stripePromise = loadStripe('sk_test_51IekfqElAzGxIuby0ba3ReSf2b0qvgkkxmVbPEEYQ1zfVqzlpGE3jlWNxWFQqgal7t3Acz6prs2kZc5JF7uBVd3U00InqEd7Db');
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 const Payment = () => {
 
@@ -22,10 +22,10 @@ const Payment = () => {
     });
     console.log(orderList);
     return (
-        <div className="container-fluid row">
+        <div style={{backgroundColor:'#111430',color:'whitesmoke'}} className="container-fluid row">
             <CustomerSidebar></CustomerSidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0 }}>
-                <h1>Antorongo Network</h1><br/>
+                <h1>Antorongo Network</h1> <hr/> <br/>
             <h2>Good Payment, <br/> <span style={{marginLeft: "20px"}}>Good Services !🙂</span></h2><br/>
                 <form>
                     <label> <span className=''>Name</span> </label><br/>

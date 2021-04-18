@@ -20,6 +20,7 @@ import CustomerOrder from './Components/Customar/CustomerOrder/CustomerOrder';
 import Payment from './Components/Customar/Payment/Payment';
 import Review from './Components/Customar/Review/Review';
 import NotFound from './Components/Home/NotFound/NotFound';
+import Footer from './Components/LandingPage/Footer/Footer';
 
 
 export const UserContext = createContext();
@@ -69,7 +70,6 @@ function App() {
             <PrivateRoute path="/bookingList">
                 <CustomerOrder />
             </PrivateRoute>
-
             <Route exact path="/">
               <Home />
             </Route>

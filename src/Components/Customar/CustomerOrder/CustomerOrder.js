@@ -20,7 +20,7 @@ const CustomerOrder = () => {
 
     return (
         
-        <div className="container-fluid row">
+        <div style={{backgroundColor:'#111430',color:'whitesmoke'}} className="container-fluid row">
             <CustomerSidebar></CustomerSidebar>
             <div className="col-md-10  p-4 pr-5 d-flex" style={{ position: "absolute", right: 0 }}>
                 {

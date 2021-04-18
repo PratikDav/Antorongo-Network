@@ -13,7 +13,7 @@ const OrderList = () => {
       });
   });
   return (
-    <div className="container-fluid row">
+    <div className="container-fluid row"style={{backgroundColor:'#111430'}}>
       <Sidebar></Sidebar>
 
       <div
@@ -22,15 +22,15 @@ const OrderList = () => {
       >
         <div>
           <div className="container">
-            <div className="row bg-dark   text-white p-2 pt-3 mb-3 rounded">
+            <div style={{backgroundColor:'#fbdf69'}} className="row text-white p-2 pt-3 mb-3 rounded">
               <div className="d-flex  justify-content-center col-3">
-                <h4>Services</h4>
+                <h4 className="fw-bold" style={{color:'#111430'}}>Services</h4>
               </div>
-              <div className="d-flex  justify-content-center col-3">
-                <h4>Price</h4>
+              <div className="d-flex   justify-content-center col-3">
+                <h4 className="fw-bold" style={{color:'#111430'}}>Price</h4>
               </div>
               <div className="d-flex  justify-content-center col-3 mx-2">
-                <h4>Customer Email</h4>
+                <h4 className="fw-bold" style={{color:'#111430'}}>Customer Email</h4>
               </div>
             </div>
           </div>

@@ -45,20 +45,21 @@ const Admin = () => {
         })
     }
     return (
-        <div className="container-fluid row">
+        <div style={{backgroundColor:'#111430',color:'whitesmoke'}} className="container-fluid row">
             <Sidebar></Sidebar>
            <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0 }}>
-                <h2>Add Services</h2>
+                <h2 style={{color: "#f7da61"}} >Add Services</h2><br/>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <label>Product Name</label><br/>
-                    <input name="name" placeholder="Product Name" {...register("name")} />
-                    <br/>
-                    <label>Product Price</label><br/>
-                    <input name="price" placeholder="Product Price" {...register("price")}  />
-                    <br/>
-                    <input {...register("picture")} name='picture' type='file' onChange={handleImageUpload}  />
-                    <br/>
-                    <input type="submit"/>
+                    <label style={{color: "#f7da61"}} className='fw-bold'>Product Name</label><br/>
+                    <input name="name" style={{border: "none"}}  className='rounded' placeholder="Product Name" {...register("name")} />
+                    <br/><br/>
+                    <label style={{color: "#f7da61"}} className='fw-bold'>Product Price</label><br/>
+                    <input name="price" style={{border: "none"}}  className='rounded'  placeholder="Product Price"  {...register("price")}  />
+                    <br/><br/>
+                    <label style={{color: "#f7da61"}} className='fw-bold'>Choose a File</label><br/>
+                    <input {...register("picture")} name='picture' type='file' onChange={handleImageUpload} className='rounded'  placeholder="Upload Icon"/>
+                    <br/><br/>
+                    <input style={{border:"none", backgroundColor:'#f7da61',color:'#111430'}} type="submit" value="Upload" className='rounded fw-bold'/>
                 </form>
            </div>
         </div>

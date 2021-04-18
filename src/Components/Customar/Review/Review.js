@@ -7,8 +7,6 @@ const Review = () => {
     
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        console.log(data)
-        console.log(data)
         const Review = {
             name : data.name,
             review : data.review,
@@ -31,7 +29,7 @@ const Review = () => {
 
     return (
        
-        <div className="container-fluid row">
+        <div style={{backgroundColor:'#111430',color:'whitesmoke'}} className="container-fluid row">
             <CustomerSidebar></CustomerSidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0 }}>
             <h2>Add a Review</h2><br/>
