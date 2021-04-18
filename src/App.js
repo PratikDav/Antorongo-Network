@@ -5,6 +5,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import Home from './Components/Home/Home/Home';
 
 import OrderList from './Components/AdminPanal/OrderList/OrderList';
@@ -18,6 +19,7 @@ import OrderView from './Components/OrderView/OrderView';
 import CustomerOrder from './Components/Customar/CustomerOrder/CustomerOrder';
 import Payment from './Components/Customar/Payment/Payment';
 import Review from './Components/Customar/Review/Review';
+import NotFound from './Components/Home/NotFound/NotFound';
 
 
 export const UserContext = createContext();
@@ -68,12 +70,15 @@ function App() {
                 <CustomerOrder />
             </PrivateRoute>
 
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
             
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           
             

@@ -11,7 +11,8 @@ const Review = () => {
         console.log(data)
         const Review = {
             name : data.name,
-            review : data.review
+            review : data.review,
+            occupation : data.occupation
         }
         const url = `http://localhost:5000/addReview`
         console.log(Review)
@@ -37,6 +38,9 @@ const Review = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>Name</label><br/>
                     <input class="form-control" name="name" placeholder="Enter Your Name" {...register("name")} required/><br/>
+                    <br/>
+                    <label>Your Occupation</label><br/>
+                    <input class="form-control" name="occupation" placeholder="Enter Your occupation" {...register("occupation")} required/><br/>
                     <br/>
                     <label>Give Your Review</label><br/>
                     <input className="form-floating form-control" type="text" name="review" placeholder="Leave a comment here" {...register("review")} required/>

@@ -1,0 +1,12 @@
+.cardStyle{
+    background-color: #f7da61;
+    text-decoration: none;
+}
+.cardImg{
+    transition: 1s linear;
+   
+}
+.cardStyle:hover .cardImg{
+    transform: rotateX(360deg);
+    
+}
