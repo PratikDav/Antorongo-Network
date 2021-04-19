@@ -32,10 +32,10 @@ const Footer = () => {
                             </div>
                         </div>
                         <div data-aos="slide-left" className="col-md-3 mt-5 container">
-                            <h4>Antogongo</h4><br/>
+                            <h4>Antorongo</h4><br/>
                             <div>
                                 <ul className="list-unstyled">
-                                    <Link style={{textDecoration:'none',color:'#111430'}}>About Antogongo</Link><br/>
+                                    <Link style={{textDecoration:'none',color:'#111430'}}>About Antorongo</Link><br/>
                                     <Link style={{textDecoration:'none',color:'#111430'}}>Achievements</Link>
                                 </ul>
                             </div>

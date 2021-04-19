@@ -9,7 +9,7 @@ const MakeAdmin = () => {
 
     const onSubmit = (data) => {
         const admin ={
-            email : data.email,
+            email : data.email
 
         }
         const url = `http://localhost:5000/addAdmin`

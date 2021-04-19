@@ -21,7 +21,7 @@ const CustomerSidebar = () => {
             </li>
         </ul>
         <div className="d-flex">
-            <h3 style={{color:'#111430'}}>Antogongo Network</h3> <img style={{height:'100px',marginRight:'80px'}} src={network} alt="" className="img-fluid rounded"/>
+            <h3 style={{color:'#111430'}}>Antorongo Network</h3> <img style={{height:'100px',marginRight:'80px'}} src={network} alt="" className="img-fluid rounded"/>
         </div>
     </div>
     );

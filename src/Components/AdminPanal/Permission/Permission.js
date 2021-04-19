@@ -12,15 +12,14 @@ const Permission = () => {
     .then(res => res.json())
     .then(data =>{
         setIsEmail(data)
+        // console.log(data)
     })
-  })
+  },[])
 
 
     return (
         <div>
-            {
-                isEmail.map((data => <Nav data={data}></Nav>))
-            }
+           <Nav data={isEmail}></Nav>
         </div>
     );
 };

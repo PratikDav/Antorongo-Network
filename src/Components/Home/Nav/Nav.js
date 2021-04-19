@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import network from '../../../image/network.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
 
@@ -9,6 +10,7 @@ const Nav = () => {
     <section>
       <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor:'#111430'}}>
   <div class="container-fluid">
+  <Link className="navbar-brand " href="#"><img style={{height: '100px'}} src={network} alt=""/><span  style={{color: '#f7da61',fontSize: '40px'}}>A</span><span style={{color: 'whitesmoke',fontSize: '27px'}}>ntorongo</span></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -10,14 +10,14 @@ const ViewReview = (props) => {
   });
 
     const {name,review,occupation} = props.data;
-    console.log(props)
+    
     return (
         
           
-          <div  data-aos="flip-left" className="card col-md-4 ms-5 mt-4 pt-3" style={{width: "18rem",backgroundColor:'#ff9800'}}>
+          <div  data-aos="flip-left" className="card col-md-4 ms-5 mt-4 pt-3" style={{width: "18rem",backgroundColor:'#f5f4f4'}}>
             <div class="card-body text-center mt-3">
-                <h5 class="card-title mb-3 fs-2"style={{color: '#111430'}}>{name}</h5>
-                <h6 class="card-subtitle mb-3 "style={{color: 'whitesmoke'}}>{occupation}</h6>
+                <h5 class="card-title mb-3 fs-2"style={{color: '#0b285d'}}>{name}</h5>
+                <h6 class="card-subtitle mb-3 "style={{color: '#414042'}}>{occupation}</h6>
                 <p class="card-text text-center" >{review}</p>
             </div>
             </div> 
