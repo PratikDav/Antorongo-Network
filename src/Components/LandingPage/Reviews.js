@@ -21,7 +21,7 @@ const Reviews = () => {
 
     return (
         <div>
-             <h1 data-aos="zoom-in-up" className="text-center mb-5">Customer Reviews</h1>
+             <h1 data-aos="zoom-in-up" className="text-center mb-5"><span style={{color: '#f21e3d'}}>C</span><span style={{color: '#414042'}}>ustomer Reviews</span></h1>
           <div className="d-flex justify-content-center">
           <div className="row">
             {

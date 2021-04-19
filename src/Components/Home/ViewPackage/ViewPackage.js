@@ -16,7 +16,7 @@ const ViewPackage = ( props ) => {
   const handleBuying = props.handleBuying;
   console.log(handleBuying)
   return (
-    <Link data-aos="flip-right" to={`/orderView/${_id}`} onChange={() =>handleBuying(props.service)} key={_id} className="card col-md-4 ms-5 mt-4 pt-3 cardStyle" style={{width: "18rem",textDecoration:'none'}}>
+    <Link data-aos="flip-right" to={`/orderView/${_id}`} onChange={() =>handleBuying(props.service)} key={_id} className="card col-md-4 ms-5 mt-4 pt-3 cardStyle" style={{width: "18rem",textDecoration:'none', boxShadow:'10px 10px 20px gray'}}>
       <img style={{height: "50px",width: "50px"}} src={imageURL} className="card-img-top mx-auto mt-4 mb-3 cardImg" alt="..." />
       <div className="card-body text-center mt-3">
           <h3 className="mb-3 fw-bold" style={{color: "#d51004"}}>{name}</h3>

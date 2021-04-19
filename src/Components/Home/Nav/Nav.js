@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {Link} from "react-router-dom"
 import network from '../../../image/network.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus} from '@fortawesome/free-solid-svg-icons'
+import { UserContext } from "../../../App";
 
 const Nav = () => {
+
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+      fetch('http://localhost:5000/addedAdmin',{
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify({email: loggedInUser.email})
+      })
+      .then(res => res.json())
+      .then(data => setIsAdmin(data))
+  },[])
 
   return (
     <section>
       <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor:'#111430'}}>
   <div class="container-fluid">
-  <Link className="navbar-brand " href="#"><img style={{height: '100px'}} src={network} alt=""/><span  style={{color: '#f7da61',fontSize: '40px'}}>A</span><span style={{color: 'whitesmoke',fontSize: '27px'}}>ntorongo</span></Link>
+  <Link className="navbar-brand " to="/"><img style={{height: '100px'}} src={network} alt=""/><span  style={{color: '#f7da61',fontSize: '40px'}}>A</span><span style={{color: 'whitesmoke',fontSize: '27px'}}>ntorongo</span></Link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,9 +35,10 @@ const Nav = () => {
         <li class="nav-item">
           <Link class="nav-link ms-5 active fw-bold"  style={{color:'#111430',fontSize:'20px',color:'#f7da61'}} aria-current="page" to="/home">Home</Link>
         </li>
-        <li class="nav-item">
-          <Link class="nav-link ms-5 fw-bold" style={{color:'#111430',fontSize:'20px',color:'#f7da61'}} to="/admin">Admin</Link>
-        </li>
+
+        {isAdmin && <li class="nav-item">
+          <Link class="nav-link ms-5 fw-bold" style={{color:'#111430',fontSize:'20px',color:'#f7da61'}} to="/admin">Admin Panel</Link>
+        </li>}
        
         <li class="nav-item">
           <Link class="nav-link ms-5 fw-bold" style={{color:'#111430',fontSize:'20px',color:'#f7da61'}} aria-current="page" to="/service">Internet Services</Link>

@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import CustomerSidebar from '../CustomerSidebar/CustomarSideber';
 import PaymentView from './PaymentView';
 import ProcessPayment from './ProcessPayment';
 
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
+import { UserContext } from '../../../App';
 
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
+
 const Payment = () => {
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const email = loggedInUser.email
 
     const [orderList, setOrderList] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/orderCollection")
+      fetch("http://localhost:5000/orderPreview/" + email)
         .then((res) => res.json())
         .then((data) => {
           setOrderList(data);

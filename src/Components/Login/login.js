@@ -180,7 +180,7 @@ const Login = () => {
                </div>     
   }   
      <p style={{color: 'red'}}>{user.error}</p>
-     {user.success && <p style={{color: 'green'}}>User {newUser ? 'created' : 'logged in'} successfully! Go to Login</p>}
+     {user.success && <p className="fw-bold"style={{color: '#111430'}}>User {newUser ? 'created' : 'logged in'} successfully! Go to Login</p>}
      { 
         user.isSignedIn ?<button style={{width: '260px',backgroundColor:'#111430',color:'whitesmoke',border:'none'}}className="btn-google rounded text-center" onClick={handleSignOut}>Sign out with Google</button>
                         : <button style={{width: '260px',backgroundColor:'#111430',color:'whitesmoke',border:'none'}} className="btn-google rounded text-center" onClick={handleSignIn}>Sign in with Google</button>
