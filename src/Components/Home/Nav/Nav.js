@@ -11,7 +11,7 @@ const Nav = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-      fetch('http://localhost:5000/addedAdmin',{
+      fetch('https://polar-lowlands-05067.herokuapp.com/addedAdmin',{
         method: 'POST',
         headers: {
             'content-type': 'application/json'

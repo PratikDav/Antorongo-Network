@@ -7,7 +7,7 @@ const OrderView = () => {
     const {id} = useParams()
     const [service, setService] = useState([])
     useEffect(() => {
-        const url = `http://localhost:5000/service/${id}`
+        const url = `https://polar-lowlands-05067.herokuapp.com/service/${id}`
         fetch(url)
         .then(res => res.json())
         .then(data =>{
@@ -21,7 +21,7 @@ const OrderView = () => {
     const history = useHistory()
 
     const handleOrderNow = () => {
-        fetch('http://localhost:5000/addOrder',{
+        fetch('https://polar-lowlands-05067.herokuapp.com/addOrder',{
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'

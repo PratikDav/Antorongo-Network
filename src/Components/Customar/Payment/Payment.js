@@ -19,7 +19,7 @@ const Payment = () => {
     const [orderList, setOrderList] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/orderPreview/" + email)
+      fetch("https://polar-lowlands-05067.herokuapp.com/orderPreview/" + email)
         .then((res) => res.json())
         .then((data) => {
           setOrderList(data);

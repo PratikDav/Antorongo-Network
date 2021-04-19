@@ -6,7 +6,7 @@ const OurPackage = () => {
     const [item,setItem] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/service')
+        fetch('https://polar-lowlands-05067.herokuapp.com/service')
         .then(res => res.json())
         .then(data => {
             // console.log(data)

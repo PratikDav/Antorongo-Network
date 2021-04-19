@@ -12,7 +12,7 @@ const Review = () => {
             review : data.review,
             occupation : data.occupation
         }
-        const url = `http://localhost:5000/addReview`
+        const url = `https://polar-lowlands-05067.herokuapp.com/addReview`
         console.log(Review)
 
         fetch(url, {

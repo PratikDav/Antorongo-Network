@@ -6,7 +6,7 @@ const ManageService = () => {
     const [orderList, setOrderList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orderCollection")
+    fetch("https://polar-lowlands-05067.herokuapp.com/orderCollection")
       .then((res) => res.json())
       .then((data) => {
         setOrderList(data);
@@ -14,7 +14,7 @@ const ManageService = () => {
   });
 
   const handleDelete = (event, id) => {
-        fetch(`http://localhost:5000/ordersCollection/delete/${id}`,{
+        fetch(`https://polar-lowlands-05067.herokuapp.com/ordersCollection/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

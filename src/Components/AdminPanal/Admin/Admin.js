@@ -13,7 +13,7 @@ const Admin = () => {
             price : data.price,
             imageURL : iconURL
         }
-        const url = `http://localhost:5000/addService`
+        const url = `https://polar-lowlands-05067.herokuapp.com/addService`
         console.log(iconData)
 
         fetch(url, {
