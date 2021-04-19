@@ -50,7 +50,7 @@ const Footer = () => {
                                 </ul>
                                 <div className="mt-3">
                                     <h6>Call now</h6>
-                                    <button className="btn btn-primary">01877559966</button>
+                                    <button style={{border: '1px solid #111430'}} className="btn">01877559966</button>
                                 </div>
                         </div>
                     </div>

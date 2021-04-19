@@ -19,7 +19,7 @@ const HeaderRoot = () => {
                 <br/>
                 <h1 data-aos="slide-left"><img style={{height: '120px'}} src={network} alt=""/><span style={{color: '#f21e3d'}}>A</span><span style={{color: '#5d7b9f'}}>ntorongo</span>  <span style={{color: '#e6ac00'}}>N</span><span style={{color: '#5d7b9f'}}>etw<img style={{height:'40px',width:'40px'}} src={image} alt="" className="img-fluid rounded"/>rk</span> </h1>
                 <p data-aos="slide-right" className ='text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate atque beatae sequi ipsum architecto! Provident quae atque quisquam molestias quidem libero ad maxime eius eaque corrupti, exercitationem, ipsam dignissimos fuga!</p>
-                <button data-aos="slide-left"className="btn btn-primary">Get A Link</button>
+                <button data-aos="slide-left"className="btn fw-bold" style={{backgroundColor:'#f21e3d',color:'whitesmoke'}}>Get A Link</button>
             </div>
             <div className ='col-md-6 '>
                 <img style={{marginLeft: '160px',height:'700px',width:'700px'}} src={server} alt="" className="img-fluid rounded"/>
