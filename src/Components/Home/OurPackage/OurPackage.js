@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ViewPackage from '../ViewPackage/ViewPackage';
+import loader from '../../../image/loader-1.gif'
 import './OurPackage.css'
 const OurPackage = () => {
 
     const [item,setItem] = useState([]);
+    const [isDataLoad,setIsDataLoad] = useState(true)
 
     useEffect(() => {
         fetch('https://polar-lowlands-05067.herokuapp.com/service')
@@ -11,6 +13,7 @@ const OurPackage = () => {
         .then(data => {
             // console.log(data)
             setItem(data)
+            setIsDataLoad(false)
         })
     },[])
 
@@ -32,6 +35,11 @@ const OurPackage = () => {
                     <h6 className='mt-4'>Take your Package</h6>
                 </div>
                 <div className='d-flex justify-content-center'>
+                    {
+                        isDataLoad && <div class=" container mt-4" style={{textAlign: 'center'}}  role="status">
+                            <img style={{height:'250px',width:'250px'}} src={loader} alt=""/>
+                        </div>
+                    }
                     <div className='row'>
                         {
                         item.map(service => <ViewPackage service={service} handleBuying={handelBuying} key= {service._id}></ViewPackage>)
